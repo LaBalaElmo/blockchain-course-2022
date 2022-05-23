@@ -7,3 +7,8 @@ address smart contract 2: 0xb37c7cda76cca41cf56556e05b7c1076bbc0519d
 function getMessage() public returns(string memory){
         return message;
 }
+
+
+BINANCE SMART CHAIN TESTNET
+
+address BSC: 0xB9e078C2C9C192cd2c5241c5E75F2c65cc81BBf6
