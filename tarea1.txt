@@ -1,0 +1,9 @@
+address smart contract 1: 0xb9e078c2c9c192cd2c5241c5e75f2c65cc81bbf6
+function getMessage() public view returns(string memory){
+        return message;
+}
+
+address smart contract 2: 0xb37c7cda76cca41cf56556e05b7c1076bbc0519d
+function getMessage() public returns(string memory){
+        return message;
+}
