@@ -3,7 +3,7 @@ function getMessage() public view returns(string memory){
         return message;
 }
 
-address smart contract 2: 0xb37c7cda76cca41cf56556e05b7c1076bbc0519d
+address smart contract 2: 0xBe8Ce3e77aFa45a217F16c5Bb8d1198f0344AEF4
 function getMessage() public returns(string memory){
         return message;
 }
