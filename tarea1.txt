@@ -1,0 +1,1 @@
+Goerli network contract: 0xB9e078C2C9C192cd2c5241c5E75F2c65cc81BBf6
