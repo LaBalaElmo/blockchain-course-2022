@@ -1,4 +1,6 @@
 //SPDX-License-Identifier: GPL-3.0
+
+//0xb37C7cdA76cca41cF56556E05B7c1076Bbc0519d
 pragma solidity ^0.8.0;
 
 contract Inbox{
@@ -10,18 +12,12 @@ contract Inbox{
         message = initialMessage;
     }
 
-    function getMessage() public view returns(string memory){
+    function getMessage() public view ownerRestricted(msg.sender) returns(string memory){
         return message;
     }
 
     function setMessage(string memory newMessage) public ownerRestricted(msg.sender){
-        //require(bytes(newMessage).length > 10, "El mensaje tiene que tener mas de 10 caracteres");
-        //require(ownerAddress == msg.sender, "Solo el owner puede modificar el mensaje");
         message = newMessage;
-    }
-
-    function getOwner()public view returns(address){
-        return ownerAddress;
     }
 
     modifier ownerRestricted(address client){
