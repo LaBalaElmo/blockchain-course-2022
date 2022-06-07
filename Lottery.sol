@@ -19,10 +19,18 @@ contract Lottery {
     }
 
     function pickWinner() public{
-        require(manager == msg.sender, "Only the manager can pick a winner");
         //return random() % players.length;
         uint index = random() % players.length;
         payable(players[index]).transfer(address(this).balance);
         players = new address[](0);
+    }
+
+    modifier restricted() {
+        require(msg.sender == manager);
+        _;
+    }
+
+    function getPlayers() public view returns (address[] memory){
+        return players;
     }
 }
