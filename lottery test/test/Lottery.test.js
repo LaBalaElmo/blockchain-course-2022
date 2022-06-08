@@ -17,8 +17,8 @@ contract("lottery test", accounts => {
 
     it("allows multiple account to enter", async ()=> {
         await instance.enter({from: accounts[0], value: web3.utils.toWei("3", "ether")});
-        await instance.enter({from: accounts[1], value: web3.utils.toWei("4", "ether")});
-        await instance.enter({from: accounts[2], value: web3.utils.toWei("5", "ether")});
+        await instance.enter({from: accounts[1], value: web3.utils.toWei("3", "ether")});
+        await instance.enter({from: accounts[2], value: web3.utils.toWei("3", "ether")});
 
         const players = await instance.getPlayers.call();
 
@@ -45,5 +45,18 @@ contract("lottery test", accounts => {
         }catch (e) {
             assert.equal("you are not the manager", e.reason);
         }
+    })
+
+    it("sends money to the winner and resets the players array", async ()=>{
+        const initialBalancePlayer = await web3.eth.getBalance(accounts[1]);
+        await instance.enter({from: accounts[1], value: web3.utils.toWei("5", "ether")});
+        const initialBalanceLottery = await web3.eth.getBalance(instance.address);
+
+        await  instance.pickWinner({from: accounts[0]});
+
+        const finalBalancePlayer = await web3.eth.getBalance(accounts[1]);
+
+        const difference = finalBalancePlayer - initialBalanceLottery;
+        assert(difference > web3.utils.toWei("4.7", "ether"))
     })
 })
