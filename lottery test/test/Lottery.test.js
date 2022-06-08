@@ -20,11 +20,20 @@ contract("lottery test", accounts => {
         await instance.enter({from: accounts[1], value: web3.utils.toWei("4", "ether")});
         await instance.enter({from: accounts[2], value: web3.utils.toWei("5", "ether")});
 
-        const players = instance.getPlayers.call();
+        const players = await instance.getPlayers.call();
 
         assert.equal(accounts[0], players[0]);
         assert.equal(accounts[1], players[1]);
         assert.equal(accounts[2], players[2]);
-        assert.equals(players.length, 3);
-    })
+        assert.equal(3, players.length);
+    });
+
+    it ("require a minimun amount of ether to enter", async ()=>{
+        try {
+            await instance.enter({from: accounts[0], value: web3.utils.toWei("1", "ether")});
+        }catch (e) {
+            //console.log("ERROT", e.reason);
+            assert.equal(e.reason, "Minimum 2.1 Ether");
+        }
+    });
 })
