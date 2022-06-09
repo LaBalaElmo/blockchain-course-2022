@@ -1,7 +1,17 @@
-const Lottery = artifacts.require("Lottery");
+const Notes = artifacts.require("Notes");
 
 contract("lottery test", accounts => {
+    let instace;
+    beforeEach("Before each", async ()=>{
+        instace = await Notes.new();
+    });
 
+    it("Verificar si un estudiante fue evaluado", async () => {
+        await instace.Evaluar("Rodrigo", 80);
+        const nota = await instace.VerNotas("Rodrigo")
+        assert.equal(nota, 80);
+    });
+    /*
     let instance;
 
     beforeEach("Before each", async () => {
@@ -64,4 +74,5 @@ contract("lottery test", accounts => {
         assert.equal(0, players.length);
         assert.equal(finalBalancePlayer, total);
     })
+     */
 })
