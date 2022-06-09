@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af886e52-cab1-4863-b188-0a08f9b0797d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lottery test/contracts/Notes.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lottery test/migrations/3_initial_migration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery test/build/contracts/Lottery.json" beforeDir="false" afterPath="$PROJECT_DIR$/lottery test/build/contracts/Lottery.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lottery test/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/lottery test/build/contracts/Migrations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lottery test/test/Lottery.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/lottery test/test/Lottery.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +58,7 @@
       <workItem from="1654705166848" duration="148000" />
       <workItem from="1654705341744" duration="43000" />
       <workItem from="1654705409280" duration="6544000" />
-      <workItem from="1654792458518" duration="4512000" />
+      <workItem from="1654792458518" duration="5554000" />
     </task>
     <servers />
   </component>

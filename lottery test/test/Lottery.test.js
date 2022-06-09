@@ -1,16 +1,25 @@
 const Notes = artifacts.require("Notes");
 
 contract("lottery test", accounts => {
-    let instace;
+    let instance;
     beforeEach("Before each", async ()=>{
-        instace = await Notes.new();
+        instance = await Notes.new();
     });
 
-    it("Verificar si un estudiante fue evaluado", async () => {
-        await instace.Evaluar("Rodrigo", 80);
-        const nota = await instace.VerNotas("Rodrigo")
+    it("Evaluar()", async () => {
+        await instance.Evaluar("Rodrigo", 80);
+        const nota = await instance.VerNotas("Rodrigo")
         assert.equal(nota, 80);
     });
+
+    it("Only teacher can call Evaluar()", async() => {
+        try {
+            await instance.Evaluar("Rodrigo", 80, {from: accounts[1]});
+            assert(false);
+        }catch (e) {
+            assert.equal(e.reason, "No tienes permisos para ejecutar esta funcion.")
+        }
+    })
     /*
     let instance;
 
