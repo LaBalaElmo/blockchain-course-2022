@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af886e52-cab1-4863-b188-0a08f9b0797d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ethereum/contracts/Lottery.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ethereum/test/Lottery.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/abis/EventTest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/abis/Inbox.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/abis/Migrations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/EventsTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/Inbox.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/contracts/Migrations.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/migrations/1_initial_migration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/migrations/2_initial_migration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/test/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereum/test/Inbox.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,5 +58,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
