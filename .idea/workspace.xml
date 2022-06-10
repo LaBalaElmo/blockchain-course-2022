@@ -2,26 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af886e52-cab1-4863-b188-0a08f9b0797d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ethereum/contracts/Lottery.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ethereum/test/Lottery.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ethereum/web3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/abis/EventTest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/abis/Inbox.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/abis/Migrations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/contracts/EventsTest.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/contracts/Inbox.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/contracts/Migrations.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/migrations/1_initial_migration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/migrations/2_initial_migration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/test/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereum/test/Inbox.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Solidity Contract" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,13 +31,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\hpzbook15\Desktop\app React\c-coin\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
