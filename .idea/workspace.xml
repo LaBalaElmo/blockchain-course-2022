@@ -4,8 +4,6 @@
     <list default="true" id="af886e52-cab1-4863-b188-0a08f9b0797d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Lottery.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethereum/abis/Lottery.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethereum/abis/Migrations.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654275559465</updated>
       <workItem from="1654275562125" duration="2212000" />
-      <workItem from="1655137521338" duration="2199000" />
+      <workItem from="1655137521338" duration="4546000" />
     </task>
     <servers />
   </component>

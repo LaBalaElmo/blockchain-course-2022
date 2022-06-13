@@ -1,10 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { connectWallet, initialize } from './ethereum/web3';
 import contractLottery from "./ethereum/abis/Lottery.json";
 
 function App() {
+
+  const [contract, setContract] = useState<any>('')
+
+  //
+  const [manager, setManager] = useState<any>('')
+  const [players, setPlayers] = useState<any>([])
+  const [balance, setBalance] = useState<any>('')
+
   /*
   componentDidMount(){
   }
@@ -13,6 +21,7 @@ function App() {
     // @ts-ignore
     if(window.web3){
       initialize();
+      loadBlockChainData();
     }
   }, []);
 
@@ -31,7 +40,18 @@ function App() {
       const contractDeployed = new Web3.eth.Contract(abi, address);
 
       const players = await contractDeployed.methods.getPlayers().call();
-      console.log('players', players, players.length);
+      setPlayers(players);
+
+      const manager = await contractDeployed.methods.manager().call();
+      setManager(manager);
+
+      const balance = await Web3.eth.getBalance(contractDeployed.options.address);
+      setBalance(balance);
+
+      setContract(contractDeployed);
+
+      const balance2 = await Web3.eth.getBalance(address);
+      console.log("balance", balance2)
     }
     //Rinkeby 4, Ganache 5777, BSC 97
   };
@@ -45,7 +65,11 @@ function App() {
         </p>
         <p>Hi React, Truffle, Firebase</p>
         <button onClick={()=> connectWallet()}>Connect</button>
-        <button onClick={()=> loadBlockChainData()}>Load</button>
+
+        <p>PLAYERS {players.length}</p>
+        <p>BALANCE {balance}</p>
+        <p>MANAGER {manager}</p>
+
       </header>
     </div>
   );
