@@ -13,6 +13,9 @@ function App() {
   const [players, setPlayers] = useState<any>([])
   const [balance, setBalance] = useState<any>('')
 
+  const [value, setValue] = useState<any>('');
+
+  const [message, setMessage] = useState<any>('');
   /*
   componentDidMount(){
   }
@@ -50,10 +53,25 @@ function App() {
 
       setContract(contractDeployed);
 
-      const balance2 = await Web3.eth.getBalance(address);
-      console.log("balance", balance2)
+      //const balance2 = await Web3.eth.getBalance(address);
+      //console.log("balance", balance2)
     }
     //Rinkeby 4, Ganache 5777, BSC 97
+  };
+
+  const onEnter = async () => {
+    //@ts-ignore
+    const Web3 = window.web3;
+
+    const accounts = await Web3.eth.getAccounts();
+
+    setMessage("Waiting on transaction success..");
+    await contract.methods.enter().send({
+      from: accounts[0],
+      value: Web3.utils.toWei(value, "ether")
+    });
+    setMessage("you have entered")
+    window.location.reload();
   };
 
   return (
@@ -70,6 +88,11 @@ function App() {
         <p>BALANCE {balance}</p>
         <p>MANAGER {manager}</p>
 
+        <p>Monto minimo mayor a 2 ETH</p>
+        <input type="text" value={value} onChange={(event) => {setValue(event.target.value)}}/>
+        <button onClick={() => {onEnter()}}>Enter</button>
+
+        <p> {message}</p>
       </header>
     </div>
   );
