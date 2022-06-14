@@ -111,17 +111,17 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <p>Hi React, Truffle, Firebase</p>
-        <button onClick={()=> connectWallet()}>Connect</button>
+        <button onClick={()=> connectWallet()} className="btn btn-success">Connect</button>
 
-        <button onClick={() => onPickWinner()}> Pick winner </button>
+        <button onClick={() => onPickWinner()} className="btn btn-success"> Pick winner </button>
 
         <p>PLAYERS {players.length}</p>
         <p>BALANCE {balance}</p>
         <p>MANAGER {manager}</p>
 
-        <p>Monto minimo mayor a 2 ETH</p>
-        <input type="text" value={value} onChange={(event) => {setValue(event.target.value)}}/>
-        <button onClick={() => {onEnter()}}>Enter</button>
+        <label>Monto minimo mayor a 2 ETH</label>
+        <input type="text" placeholder="Monto en ether" value={value} onChange={(event) => {setValue(event.target.value)}} />
+        <button onClick={() => {onEnter()}} className="btn btn-warning">Enter</button>
 
         <p> {message}</p>
       </header>
