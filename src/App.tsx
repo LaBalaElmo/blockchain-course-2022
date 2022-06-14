@@ -59,6 +59,18 @@ function App() {
     //Rinkeby 4, Ganache 5777, BSC 97
   };
 
+  const loadBalance = async () => {
+    //@ts-ignore
+    const Web3 = window.web3;
+    const balance = await Web3.eth.getBalance(contract.options.address);
+    setBalance(balance);
+  }
+
+  const loadPlayers = async () => {
+    const players = await contract.methods.getPlayers().call();
+    setPlayers(players);
+  };
+
   const onEnter = async () => {
     //@ts-ignore
     const Web3 = window.web3;
@@ -71,8 +83,25 @@ function App() {
       value: Web3.utils.toWei(value, "ether")
     });
     setMessage("you have entered")
-    window.location.reload();
+
+    loadBalance();
+    loadPlayers();
   };
+
+  const onPickWinner = async () => {
+    //@ts-ignore
+    const Web3 = window.web3;
+    const  accounts = await Web3.eth.getAccounts();
+    setMessage("waiting on transaction success ...")
+
+    contract.methods.pickWinner().send({
+      from: accounts[0]
+    });
+
+    setMessage("A winner has been picked");
+    loadBalance();
+    loadPlayers();
+  }
 
   return (
     <div className="App">
@@ -83,6 +112,8 @@ function App() {
         </p>
         <p>Hi React, Truffle, Firebase</p>
         <button onClick={()=> connectWallet()}>Connect</button>
+
+        <button onClick={() => onPickWinner()}> Pick winner </button>
 
         <p>PLAYERS {players.length}</p>
         <p>BALANCE {balance}</p>
