@@ -110,7 +110,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <p>Hi React, Truffle, Firebase</p>
+        <p>Deployed on Ganache Network</p>
         <button onClick={()=> connectWallet()} className="btn btn-success">Connect</button>
 
         <button onClick={() => onPickWinner()} className="btn btn-success"> Pick winner </button>
