@@ -24,7 +24,7 @@
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
-const mnemonic = "crazy access deputy shield leave arm banner special theory force option letter";
+const mnemonic = "";
 
 module.exports = {
   /**

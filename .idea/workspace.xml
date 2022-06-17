@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af886e52-cab1-4863-b188-0a08f9b0797d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/EventTest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Inbox.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Lottery.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Migrations.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="af886e52-cab1-4863-b188-0a08f9b0797d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +48,7 @@
       <workItem from="1654275562125" duration="2212000" />
       <workItem from="1655137521338" duration="4768000" />
       <workItem from="1655223716412" duration="5950000" />
-      <workItem from="1655310072069" duration="6010000" />
+      <workItem from="1655310072069" duration="6731000" />
     </task>
     <servers />
   </component>
