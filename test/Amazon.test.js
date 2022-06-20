@@ -5,7 +5,7 @@ contract("Amazon test", accounts => {
     beforeEach("Before each", async () => {
         instance = await Amazon.new();
     });
-    it("Only owner, amount equal to zero", async () =>{
+    it("Test 1 Only owner, amount equal to zero", async () =>{
         try{
             //{id: 1, name: "Prueba", stock: 5, price: 0}
             await instance.addProduct([1, "prueba", 5, 1], {from: accounts[1]});
@@ -18,7 +18,7 @@ contract("Amazon test", accounts => {
         }
     });
 
-    it("The name must have a lenght greater than 5 characteres", async () => {
+    it("Test 2 The name must have a lenght greater than 5 characteres", async () => {
         try {
             await instance.addProduct([1, "sole", 5, 1], {from: accounts[0]});
             assert(false);
@@ -27,7 +27,7 @@ contract("Amazon test", accounts => {
         }
     });
 
-    it("Only the owner can modify the stock", async () => {
+    it("TestOnly the owner can modify the stock", async () => {
         try {
             await instance.addProduct([1, "prueba", 5, 1], {from: accounts[0]});
             await instance.addQuantity(1, 5, {from: accounts[1]});
