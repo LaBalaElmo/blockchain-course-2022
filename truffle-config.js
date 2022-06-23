@@ -51,10 +51,10 @@ module.exports = {
      },
       rinkeby: {
          provider: ()=> new HDWalletProvider(mnemonic, 'https://rinkeby.infura.io/v3/40dc1b14509c4b62bfa066b569aa9e27'),
-         network_id: "4",
-         gas: 5000000,
-         gasPrice: 1000000000,
-          networkCheckTimeout: 100000,
+         network_id: 4,
+         //gas: 5000000,
+         //gasPrice: 1000000000,
+         //networkCheckTimeout: 100000,
       },
       bscTestnet: {
          provider: ()=> new HDWalletProvider(mnemonic, 'https://data-seed-prebsc-1-s1.binance.org:8545'),
