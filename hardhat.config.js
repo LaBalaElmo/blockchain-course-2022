@@ -2,6 +2,10 @@ require("@nomiclabs/hardhat-waffle");
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
+
+const key = '';
+const mnemonic = ']';
+;
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -21,11 +25,18 @@ module.exports = {
   networks: {
     goerly: {
       url: 'https://eth-goerli.alchemyapi.io/v2/D82OBa-S37NXflgnHRYRp5vTuhYZzWh8',
-      accounts: ['']
+      accounts: [key]
     },
     rinkeby: {
       url: 'https://eth-rinkeby.alchemyapi.io/v2/HzovK0JpWsJU0BSckw2kz9GHSeQEnTu7',
-       accounts: ['']
+       accounts: [key]
+    },
+    bscTestnet: {
+      url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+      chainId: 97,
+      accounts: {
+        mnemonic: mnemonic
+      }
     }
   },
   paths: {
