@@ -4,7 +4,7 @@ require("@nomiclabs/hardhat-waffle");
 // https://hardhat.org/guides/create-task.html
 
 const key = '';
-const mnemonic = ']';
+const mnemonic = '';
 ;
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -34,6 +34,13 @@ module.exports = {
     bscTestnet: {
       url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
       chainId: 97,
+      accounts: {
+        mnemonic: mnemonic
+      }
+    },
+    bsc: {
+      url: 'https://bsc-dataseed.binance.org',
+      chainId: 56,
       accounts: {
         mnemonic: mnemonic
       }

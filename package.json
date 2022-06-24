@@ -13,18 +13,18 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "4.0.3",
+    "truffle-hdwallet-provider": "^1.0.17",
     "typescript": "^4.7.2",
     "web-vitals": "^2.1.4",
-
     "web3": "^1.7.3",
     "web3-utils": "^1.7.3",
-    "truffle-hdwallet-provider": "^1.0.17"
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "hardhat": "^2.9.9",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "ethereum-waffle": "^3.4.4",
-    "@nomiclabs/hardhat-ethers": "^2.0.6"
+    "hardhat": "^2.9.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,7 +35,8 @@
     "bsc-test-truffle": "truffle migrate --network bscTestnet --reset",
     "goerly-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/lottery-script.js --network goerly",
     "rinkeby-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/lottery-script.js --network rinkeby",
-    "bsc-test-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/lottery-script.js --network bscTestnet"
+    "bsc-test-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/lottery-script.js --network bscTestnet",
+    "bsc-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/lottery-script.js --network bsc"
   },
   "eslintConfig": {
     "extends": [

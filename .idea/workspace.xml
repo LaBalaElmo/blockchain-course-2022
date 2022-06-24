@@ -4,10 +4,12 @@
     <list default="true" id="313faf42-d133-406b-9aec-f8104b6dc7a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Lottery.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethereum/abis/Lottery.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethereum/abis/Migrations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Lottery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Migrations.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\hpzbook15\Desktop\blockchain\blockchain-course-2022\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -55,7 +57,7 @@
       <updated>1655917071613</updated>
       <workItem from="1655917073510" duration="4104000" />
       <workItem from="1656001278806" duration="7386000" />
-      <workItem from="1656089200902" duration="1594000" />
+      <workItem from="1656089200902" duration="3413000" />
     </task>
     <servers />
   </component>
