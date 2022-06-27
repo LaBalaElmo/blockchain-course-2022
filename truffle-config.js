@@ -64,6 +64,10 @@ module.exports = {
          //skipDryRun: true,
          //networkCheckTimeout: 100000,
       },
+      ethereum : {
+         provider: ()=> new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/v3/ea2d376be45e4b918d0342887d02f022'),
+          network_id: 1,
+      },
     //
     // An additional network, but with some advanced options…
     // advanced: {

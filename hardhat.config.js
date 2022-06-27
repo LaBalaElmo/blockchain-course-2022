@@ -44,6 +44,10 @@ module.exports = {
       accounts: {
         mnemonic: mnemonic
       }
+    },
+    ethereum: {
+      url: 'https://eth-mainnet.alchemyapi.io/v2/cNXVzrNAgRwFSQG7KhwA0gZ_9i8wICl0',
+      accounts: [key]
     }
   },
   paths: {
