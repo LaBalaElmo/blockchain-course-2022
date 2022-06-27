@@ -2,14 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="313faf42-d133-406b-9aec-f8104b6dc7a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ethereum-hardhat/contracts/Ejemplo.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethereum-hardhat/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/artifacts/hardhat/console.sol/console.dbg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/artifacts/hardhat/console.sol/console.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/artifacts/src/ethereum-hardhat/contracts/Lottery.sol/Lottery.dbg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/artifacts/src/ethereum-hardhat/contracts/Lottery.sol/Lottery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/cache/solidity-files-cache.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/contracts/Lottery.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum-hardhat/scripts/lottery-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethereum-hardhat/scripts/ejemplo-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Lottery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum/abis/Migrations.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum/contracts/Lottery.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum/migrations/2_initial_migration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ethereum/test/Lottery.test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Solidity Contract" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +73,7 @@
       <workItem from="1655917073510" duration="4104000" />
       <workItem from="1656001278806" duration="7386000" />
       <workItem from="1656089200902" duration="4085000" />
-      <workItem from="1656346789325" duration="1276000" />
+      <workItem from="1656346789325" duration="3289000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,7 @@ require("@nomiclabs/hardhat-waffle");
 
 const key = '';
 const mnemonic = '';
-;
+
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
