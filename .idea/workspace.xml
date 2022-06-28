@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="313faf42-d133-406b-9aec-f8104b6dc7a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +59,8 @@
       <workItem from="1655917073510" duration="4104000" />
       <workItem from="1656001278806" duration="7386000" />
       <workItem from="1656089200902" duration="4085000" />
-      <workItem from="1656346789325" duration="4156000" />
+      <workItem from="1656346789325" duration="4995000" />
+      <workItem from="1656433207332" duration="1196000" />
     </task>
     <servers />
   </component>
