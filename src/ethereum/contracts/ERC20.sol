@@ -71,9 +71,9 @@ contract ERC20 is IERC20, IERC20Metadata{
         uint256 fromBalance = _balances[from];
         require(fromBalance >= amount, "ERC20: tranfer amount exceeds balance.");
 
-        unchecked {
-            _balances[from] = fromBalance - amount;
-        }
+    unchecked {
+        _balances[from] = fromBalance - amount;
+    }
 
         _balances[to] += amount;
 
@@ -94,10 +94,28 @@ contract ERC20 is IERC20, IERC20Metadata{
 
         if(currentAllowance != type(uint256).max) {
             require(currentAllowance >= amount, "ERC20: insuficient allowance. ");
-            unchecked {
-                _approve(owner, spender, currentAllowance - amount);
-            }
+        unchecked {
+            _approve(owner, spender, currentAllowance - amount);
         }
+        }
+    }
+
+    function _mint(address account, uint256 amount) internal {
+        require(account != address(0), "ERC20: mint to the zero address.");
+        _totalSupply += amount;
+        _balances[account] += amount;
+
+        emit Transfer(address(0), account, amount);
+    }
+
+    function _burn(address account, uint256 amount) internal {
+        require(account != address(0), "ERC20: burn from the zero address.");
+        uint256 accountBalance = _balances[account];
+        require(accountBalance >= amount, "ERC20: burn amount exceds balance");
+        _balances[account] = accountBalance - amount;
+        _totalSupply -= amount;
+
+        emit Transfer(account, address(0), amount);
     }
 
 }
