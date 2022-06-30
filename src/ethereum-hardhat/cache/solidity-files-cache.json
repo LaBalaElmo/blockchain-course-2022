@@ -1,0 +1,150 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\hpzbook15\\Desktop\\blockchain\\blockchain-course-2022\\src\\ethereum-hardhat\\contracts\\ERC20.sol": {
+      "lastModificationDate": 1656609909510,
+      "contentHash": "f1de162a73f1d9df15e45e2a27e8eb63",
+      "sourceName": "src/ethereum-hardhat/contracts/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./IERC20Metadata.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "C:\\Users\\hpzbook15\\Desktop\\blockchain\\blockchain-course-2022\\src\\ethereum-hardhat\\contracts\\IERC20.sol": {
+      "lastModificationDate": 1656609909506,
+      "contentHash": "e458cea0901d4063dfcd46d096b0306b",
+      "sourceName": "src/ethereum-hardhat/contracts/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "C:\\Users\\hpzbook15\\Desktop\\blockchain\\blockchain-course-2022\\src\\ethereum-hardhat\\contracts\\IERC20Metadata.sol": {
+      "lastModificationDate": 1656609909523,
+      "contentHash": "46e8662bb63d1006e4a76c60ca1b99ac",
+      "sourceName": "src/ethereum-hardhat/contracts/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "C:\\Users\\hpzbook15\\Desktop\\blockchain\\blockchain-course-2022\\src\\ethereum-hardhat\\contracts\\Main.sol": {
+      "lastModificationDate": 1656609909527,
+      "contentHash": "af5900c52932a8694e78fb613a55d59b",
+      "sourceName": "src/ethereum-hardhat/contracts/Main.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Main"
+      ]
+    }
+  }
+}

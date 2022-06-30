@@ -33,10 +33,10 @@
     "eject": "react-scripts eject",
     "rinkeby-truffle": "truffle migrate --network rinkeby --reset",
     "bsc-test-truffle": "truffle migrate --network bscTestnet --reset",
-    "goerly-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/ejemplo-script.js --network goerly",
-    "rinkeby-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/ejemplo-script.js --network rinkeby",
-    "bsc-test-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/ejemplo-script.js --network bscTestnet",
-    "bsc-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/ejemplo-script.js --network bsc"
+    "goerly-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/main-script.js --network goerly",
+    "rinkeby-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/main-script.js --network rinkeby",
+    "bsc-test-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/main-script.js --network bscTestnet",
+    "bsc-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/main-script.js --network bsc"
   },
   "eslintConfig": {
     "extends": [

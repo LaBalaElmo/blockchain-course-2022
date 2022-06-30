@@ -2,39 +2,65 @@ import React, { useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { connectWallet, initialize } from './ethereum/web3';
-//import contractLottery from "./ethereum/abis/Lottery.json";
-//import contractLottery from "./ethereum-hardhat/artifacts/src/ethereum-hardhat/contracts/Lottery.sol/Lottery.json";
+//import contractLottery from "./ethereum/abis/Main.json";
+import contractLottery from "./ethereum-hardhat/artifacts/src/ethereum-hardhat/contracts/Main.sol/Main.json";
 
 function App() {
+    const [contract, setContract] = useState<any>('')
+    const [message, setMessage] = useState<any>('');
+    const [balanceAccount, setBalanceAccount] = useState<any>('');
 
+    const [valor1, setValor1] = useState<any>('');
+    const [valor2, setValor2] = useState<any>('');
+    const [valor3, setValor3] = useState<any>('');
+    const [valor4, setValor4] = useState<any>('');
+    const [valor5, setValor5] = useState<any>('');
+    const [valor6, setValor6] = useState<any>('');
 
+    const [total, setTotal] = useState<any>('');
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>C-COIN</p>
-      </header>
-    </div>
-  );
-}
+    const [addressContract, setaddressContract] = useState<any>('');
+    const [precio, setPrecio] = useState<any>('');
 
-export default App;
+    const [p, setP] = useState<any>('');
+    // @ts-ignore
+    const handleChange1 = event => {
+        setValor1(event.target.value);
+    };
 
-/*
-const [contract, setContract] = useState<any>('')
+    // @ts-ignore
+    const handleChange2 = event => {
+        setValor2(event.target.value);
+    };
 
-  //
-  const [manager, setManager] = useState<any>('')
-  const [players, setPlayers] = useState<any>([])
-  const [balance, setBalance] = useState<any>('')
+    // @ts-ignore
+    const handleChange3 = event => {
+        setValor3(event.target.value);
+    };
 
-  const [value, setValue] = useState<any>('');
+    // @ts-ignore
+    const handleChange4 = event => {
+        setValor4(event.target.value);
+    };
 
-  const [message, setMessage] = useState<any>('');
+    // @ts-ignore
+    const handleChange5 = event => {
+        setValor5(event.target.value);
+    };
 
-  componentDidMount(){
-  }
+    // @ts-ignore
+    const handleChange6 = event => {
+        setValor6(event.target.value);
+    };
+    /*
+    let valor1: string = '';
+    let valor2: string = '';
+    let valor3: string = '';
+    let valor4: string = '';
+    let valor5: string = '';
+    let valor6: string = '';
+*/ //componentDidMount(){
+  //}
 
 useEffect(() => {
   // @ts-ignore
@@ -49,42 +75,11 @@ const loadBlockChainData = async () => {
   //@ts-ignore
   const Web3 = window.web3;
   //const networkData = contractLottery.networks["5777"];
-  //console.log('networkData', networkData)
-
-  //if(networkData){
   const abi = contractLottery.abi;
-  //const address = networkData.address;
-  //console.log('address', address);
-
-  const contractDeployed = new Web3.eth.Contract(abi, '0xA7F3fB7C4F35F973912bceCb0E39709eEe493DC1');
-
-  const players = await contractDeployed.methods.getPlayers().call();
-  setPlayers(players);
-
-  const manager = await contractDeployed.methods.manager().call();
-  setManager(manager);
-
-  const balance = await Web3.eth.getBalance(contractDeployed.options.address);
-  setBalance(balance);
-
+  const address = "0x2c96735A22838778EEfAd4470C434FCA078D22B4";
+  const contractDeployed = new Web3.eth.Contract(abi, address);
+  setaddressContract(await contractDeployed.methods.getContractAddress().call());
   setContract(contractDeployed);
-
-  //const balance2 = await Web3.eth.getBalance(address);
-  //console.log("balance", balance2)
-  //}
-  //Rinkeby 4, Ganache 5777, BSC 97
-};
-
-const loadBalance = async () => {
-  //@ts-ignore
-  const Web3 = window.web3;
-  const balance = await Web3.eth.getBalance(contract.options.address);
-  setBalance(balance);
-}
-
-const loadPlayers = async () => {
-  const players = await contract.methods.getPlayers().call();
-  setPlayers(players);
 };
 
 const onEnter = async () => {
@@ -93,48 +88,123 @@ const onEnter = async () => {
 
   const accounts = await Web3.eth.getAccounts();
 
-  setMessage("Waiting on transaction success..");
-  await contract.methods.enter().send({
-    from: accounts[0],
-    value: Web3.utils.toWei(value, "ether")
-  });
-  setMessage("you have entered")
-
-  loadBalance();
-  loadPlayers();
+  //await contract.methods.enter().send({
+    //from: accounts[0],
+    //value: Web3.utils.toWei(value, "ether")
+  //});
 };
 
-const onPickWinner = async () => {
-  //@ts-ignore
-  const Web3 = window.web3;
-  const  accounts = await Web3.eth.getAccounts();
-  setMessage("waiting on transaction success ...")
+/*
+const getBalanceAccount = async (address: any) => {
+    //@ts-ignore
+    const Web3 = window.web3;
+    const balance = await contract.balanceAccount(address);
+    setBalanceAccount(balance);
+};
+*/
+    //@ts-ignore
+    const buyTokens = async (client, amount, pay) => {
+        //@ts-ignore
+        const Web3 = window.web3;
+        const accounts = await Web3.eth.getAccounts();
 
-  contract.methods.pickWinner().send({
-    from: accounts[0]
-  });
+        await contract.methods.buyTokens(client, amount).send({
+            from: accounts[0],
+            value: Web3.utils.toWei(pay, "ether")});
 
-  setMessage("A winner has been picked");
-  loadBalance();
-  loadPlayers();
+    }
+
+    //@ts-ignore
+    const getbalanceAccount = async (account) => {
+        const p = await contract.methods.balanceAccount(account).call()
+        setP(p)
+    }
+
+    const getTotalSupply = async () => {
+        const supply = await contract.methods.getTotalSupply().call();
+        setTotal(supply);
+    }
+
+    //@ts-ignore
+    const generateTokens = async (amount) => {
+        //@ts-ignore
+        const Web3 = window.web3;
+        const accounts = await Web3.eth.getAccounts();
+        await contract.methods.generateTokens(amount).send({from: accounts[0]});
+    }
+
+    //@ts-ignore
+    const priceTokens = async (amount) => {
+        const price = await contract.methods.priceTokens(amount).call();
+        setPrecio(price/1000000000000000000);
+    }
+
+
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>C-COIN</p>
+
+          <button onClick={() => connectWallet()} className="btn btn-success">Connect</button>
+
+
+          <div className="container">
+              <h4>Comprar tokens ERC-20</h4>
+              <input type="number" placeholder="Monto de ethereum para pagar" onChange={handleChange1} value={valor1}/>
+              <input type="text" placeholder="Direccion de destino" onChange={handleChange2} value={valor2}/>
+              <input type="number" placeholder="Cantidad de tokens a comprar (1 token = 1 Ether)" onChange={handleChange3} value={valor3}/>
+              <button onClick={() => buyTokens(valor2, valor3, valor1)}>Comprar tokens</button>
+          </div>
+
+          <br/>
+          <br/>
+
+          <div>
+              <h4>Balance de tokens de un usuario</h4>
+              <input type="text" placeholder="Direccion del usuario" onChange={handleChange4} value={valor4}/>
+              <p>La cantidad de tokens es: {p}</p>
+              <button onClick={() => getbalanceAccount(valor4)}> BALANCE DE TOKENS</button>
+          </div>
+
+          <br/>
+          <br/>
+          <div>
+              <h4>Balance total de tokens del Smart Contract</h4>
+              <p>La cantidad total de tokens es: {total} </p>
+              <button onClick={() => getTotalSupply()}> BALANCE DE TOKENS</button>
+          </div>
+
+          <br/>
+          <br/>
+          <div>
+              <h4>Añadir nuevos Tokens</h4>
+              <input type="text" placeholder="Cantidad de tokes a incrementar" onChange={handleChange5} value={valor5}/>
+              <button onClick={() => generateTokens(valor5)}> INCREMENTO DE TOKENS</button>
+          </div>
+
+          <br/>
+          <br/>
+          <div>
+              <h4>Direccion del smart contract en Goerli</h4>
+              <p>{addressContract}</p>
+          </div>
+
+          <br/>
+          <br/>
+          <div>
+              <h4>Calcular precio de tokens en ETH</h4>
+              <input type="text" placeholder="Cantidad de tokens" onChange={handleChange6} value={valor6}/>
+              <p>El precio de {valor6} es {precio}</p>
+              <button onClick={() => priceTokens(valor6)}> CALCULAR PRECIO</button>
+          </div>
+
+
+      </header>
+    </div>
+  );
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>Deployed on Ganache Network</p>
-        <button onClick={()=> connectWallet()} className="btn btn-success">Connect</button>
+export default App;
 
-        <button onClick={() => onPickWinner()} className="btn btn-success"> Pick winner </button>
-
-        <p>PLAYERS {players.length}</p>
-        <p>BALANCE {balance}</p>
-        <p>MANAGER {manager}</p>
-
-        <label>Monto minimo mayor a 2 ETH</label>
-        <input type="text" placeholder="Monto en ether" value={value} onChange={(event) => {setValue(event.target.value)}} />
-        <button onClick={() => {onEnter()}} className="btn btn-warning">Enter</button>
-
-        <p> {message}</p>
- */

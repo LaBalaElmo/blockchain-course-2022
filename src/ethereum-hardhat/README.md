@@ -10,6 +10,6 @@ npx hardhat compile
 npx hardhat clean
 npx hardhat test
 npx hardhat node
-node scripts/ejemplo-script.js
+node scripts/main-script.js
 npx hardhat help
 ```
