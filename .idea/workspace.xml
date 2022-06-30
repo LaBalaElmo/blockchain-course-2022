@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="313faf42-d133-406b-9aec-f8104b6dc7a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ethereum/contracts/ERC20.sol" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethereum/contracts/ERC20.sol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
       <workItem from="1656089200902" duration="4085000" />
       <workItem from="1656346789325" duration="4995000" />
       <workItem from="1656433207332" duration="4325000" />
-      <workItem from="1656519445383" duration="1309000" />
+      <workItem from="1656519445383" duration="3417000" />
     </task>
     <servers />
   </component>
